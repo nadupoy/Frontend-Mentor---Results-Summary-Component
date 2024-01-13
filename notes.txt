@@ -1,0 +1,36 @@
+README.md NOTES:
+
+1. Using a Personal Access Token to sign-in/verify an account on Github via Git on the Linux(WSL) terminal.
+
+Discovered this upon encountering a 'fatal: Authentication failed for <git repository>' error.
+
+I managed to find a solution here https://github.com/orgs/community/discussions/29193 that explains how Github uses PAT(Personal Access Token) instead of an account password when authenticating Git operations.
+
+
+2. Icon `rel` attribute values that are mainly used to indicate special icon types for use on various mobile platforms. Came across this line of code in the `public/index.html` file that put this into use:
+    `<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />`
+
+This was a good source that explained it: <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+Further reading on the `<link>` element and its `rel` attribute values: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link
+
+
+3. I encountered a problem where I was pushing code to Github via the Linux(WSL) terminal but it failed to reflect on the Github repository.
+
+I realised I was not pushing code from the root directory `results-summary-component-main`.
+Instead I was pushing from the sub-directory `results-summary-component-main/public` hence the pushed code failed to reflect in the Github repository.
+
+LESSON LEARNT! ALWAYS WORK FROM THE ROOT DIRECTORY!!!
+
+
+4. Self-hosting web fonts: https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts
+
+
+5. Encountered the following error:
+    'SyntaxError: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>?'
+
+From this (https://www.geeksforgeeks.org/adjacent-jsx-elements-must-be-wrapped-in-an-enclosing-tag/) article, I learnt that the render method can only take a single HTML element.
+To fix the error, multiple HTML elements are embedded inside a single <div> element.
+
+
+6. I learnt how to fetch & display data from a JSON file from this video (https://www.youtube.com/watch?v=aJgAwjP20RY)
