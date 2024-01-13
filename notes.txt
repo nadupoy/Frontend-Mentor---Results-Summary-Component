@@ -34,3 +34,8 @@ To fix the error, multiple HTML elements are embedded inside a single <div> elem
 
 
 6. I learnt how to fetch & display data from a JSON file from this video (https://www.youtube.com/watch?v=aJgAwjP20RY)
+
+
+7. Icon images could not initially load when they were in the same directory as App.js.
+
+Fixed the issue by moving the icon image files to the public directory, as they would be referenced from the index.html file & not the App.js file.
