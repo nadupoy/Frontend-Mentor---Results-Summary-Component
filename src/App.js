@@ -1,4 +1,5 @@
 import "./App.css";
+import DATA from "./data.json";
 
 function Result() {
   return (
@@ -22,16 +23,22 @@ function Result() {
   );
 }
 
-function ResultsSummary({data}) {
+function SummaryData() {
   return (
     <div>
-      <img src={data.icon} alt="category-icon" />
-      <p>{data.category}</p>
-      <section>
-        <p>
-          <span>{data.score}</span> / 100
-        </p>
-      </section>
+      {DATA && DATA.map((data) => {
+        return (
+          <div key={data.id}>
+            <img src={data.icon} key={data.key} />
+
+            <p>{data.category}</p>
+
+            <section>
+              <span>{data.score}</span> / 100
+            </section>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -43,7 +50,7 @@ function Button() {
 function Summary() {
   return (
     <div>
-      <ResultsSummary />
+      <SummaryData />
 
       <Button />
     </div>
