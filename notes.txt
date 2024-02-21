@@ -39,3 +39,5 @@ To fix the error, multiple HTML elements are embedded inside a single <div> elem
 7. Icon images could not initially load when they were in the same directory as App.js.
 
 Fixed the issue by moving the icon image files to the public directory, as they would be referenced from the index.html file & not the App.js file.
+
+8. How to load static(https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css#loading-a-self-hosted-font-with-font-face) and variable(https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css#working-with-variable-fonts) formats of locally hosted fonts.
